@@ -3,7 +3,7 @@ class BackgroundFooter {
         this.ctx = ctx
 
         this.x = 0
-        this.vx = -3
+        this.vx = -6
 
         this.width = this.ctx.canvas.width
         this.height = 79

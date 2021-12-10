@@ -6,6 +6,7 @@ class Game {
 
        this.background = new Background(ctx)
        this.backgroundfooter = new BackgroundFooter(ctx)
+       this.player = new Player(ctx)
 
 
 
@@ -47,14 +48,20 @@ class Game {
    move(){
        this.background.move()
        this.backgroundfooter.move()
+       this.player.move()
 
    }
 
    draw(){
        this.background.draw()
        this.backgroundfooter.draw()
+       this.player.draw()
 
    }
+
+   onKeyDown(keyCode) {
+    this.player.onKeyDown(keyCode)
+  }
 
 }
 
