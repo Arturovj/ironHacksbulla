@@ -2,11 +2,11 @@ class Player {
     constructor(ctx){
         this.ctx = ctx 
 
-        this.width = 84
-        this.height = 84
+        this.width = 100
+        this.height = 100
 
         this.x = 50
-        this.y = 50
+        this.y = 335
 
         this.img = new Image ()
         this.img.src = './images/hasbullabien.png'
@@ -19,21 +19,37 @@ class Player {
         
         this.vx = 0
         this.vy = 0
+        
 
         this.ay = 0.3
 
+        this.horizontalFrames = 4
+        this.verticalFrames = 1
+    
+        this.xFrame = 0
+        this.yFrame = 0
+
         this.jumping = false
-        this.maxY = 335
+        this.maxY = 320
+
+        this.tick = 0
     }
 
     draw(){
-       this.ctx.drawImage(
+       this.ctx.drawImage(   
         this.img,
+        (this.img.width * this.xFrame) / this.horizontalFrames,
+        (this.img.height * this.yFrame) / this.verticalFrames,
+        this.img.width / this.horizontalFrames,
+        this.img.height / this.verticalFrames,
         this.x,
         this.y,
         this.width,
-        this.height,
+        this.height
        )
+console.log((this.img.width * this.xFrame) / this.horizontalFrames,)
+console.log((this.img.height * this.yFrame) / this.verticalFrames,)
+       this.tick++
 
     }
 
@@ -51,16 +67,37 @@ class Player {
           this.jumping = false
         }
 
+        if (this.tick % 4 === 0) {
+            this.xFrame += 1
+      
+            if (this.xFrame > 3) {
+              this.xFrame = 0
+            }
+          }
+
     }
 
 
     onKeyDown(keyCode) {
-        if (keyCode === KEY_SPACEBAR) {
+        if (keyCode === KEY_SPACEBAR && !this.jumping) {
           this.vy = -10
           this.jumping = true
         }
     }
 
+    collidesWith(obstacle) {
 
+        if (
+          this.x < obstacle.x + obstacle.width &&
+          this.x + this.width > obstacle.x &&
+          this.y < obstacle.y + obstacle.height &&
+          this.y + this.height > obstacle.y
+        ) {
+            console.log('collision')
+          return true
+        }
+        
+        return false
+      }
 
 }

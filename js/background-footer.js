@@ -1,7 +1,6 @@
 class BackgroundFooter {
     constructor (ctx){
         this.ctx = ctx
-
         this.x = 0
         this.vx = -6
 

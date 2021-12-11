@@ -1,7 +1,6 @@
 class Background {
     constructor (ctx){
         this.ctx = ctx
-
         this.x = 0
         this.vx = -4
 
