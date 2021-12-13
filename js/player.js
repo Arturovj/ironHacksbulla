@@ -30,7 +30,7 @@ class Player {
         this.yFrame = 0
 
         this.jumping = false
-        this.maxY = 320
+        this.maxY = 345
 
         this.tick = 0
     }
@@ -47,8 +47,7 @@ class Player {
         this.width,
         this.height
        )
-console.log((this.img.width * this.xFrame) / this.horizontalFrames,)
-console.log((this.img.height * this.yFrame) / this.verticalFrames,)
+
        this.tick++
 
     }
@@ -88,10 +87,10 @@ console.log((this.img.height * this.yFrame) / this.verticalFrames,)
     collidesWith(obstacle) {
 
         if (
-          this.x < obstacle.x + obstacle.width &&
-          this.x + this.width > obstacle.x &&
-          this.y < obstacle.y + obstacle.height &&
-          this.y + this.height > obstacle.y
+          this.x +30  < (obstacle.x) + obstacle.width &&
+          this.x + (this.width - 50) > obstacle.x &&
+         // this.y < obstacle.y + obstacle.height &&
+          this.y + (this.height -30 ) > obstacle.y
         ) {
             console.log('collision')
           return true

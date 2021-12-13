@@ -21,14 +21,14 @@ class BackgroundFooter {
             this.ctx.drawImage(
                 this.img,
                 this.x,
-                400,
+                425,
                 this.width,
                 this.height,               
             )
             this.ctx.drawImage(
                 this.img,
                 this.x + this.width,
-                400,
+                425,
                 this.width,
                 this.height,               
             )

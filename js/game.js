@@ -8,7 +8,7 @@ class Game {
        this.background = new Background(ctx)
        this.backgroundfooter = new BackgroundFooter(ctx)
        this.player = new Player(ctx)
-       this.scoreimage = new ScoreImage(ctx)
+       this.scoreimage = undefined
        
 
        this.obstacles = []
@@ -17,6 +17,9 @@ class Game {
        this.obstacleFramesCount = 0
        this.intervalId = undefined
 
+       this.hasbullaSound = new Audio('/sounds/hasbullajump.wav')
+       this.hasbullaSound.volume = 0.3
+       
        this.score = 0
 
        this.fps = 1000 / 60
@@ -120,6 +123,7 @@ class Game {
 
    onKeyDown(keyCode) {
     this.player.onKeyDown(keyCode)
+    this.hasbullaSound.play()
   }
 
 
@@ -136,13 +140,28 @@ class Game {
 
 
 gameOver() {
-    clearInterval(this.intervalId)
-    this.scoreimage.score = this.score
-    this.scoreimage.draw()
-
     
 
+    let imageType = 0;
+
+
+    if (this.score > 0 && this.score < 5) {
+        imageType = 0
+    } else if(this.score >= 5 && this.score < 15) {
+        imageType = 1
+    } else if(this.score >= 15 && this.score < 25) {
+        imageType = 2
+    } else if(this.score >= 25 && this.score < 35) {
+        imageType = 3
+    }
+
+    this.scoreimage = new ScoreImage(ctx, imageType)
+
+    clearInterval(this.intervalId)
+    this.scoreimage.score = this.score
+
   }
+
 
 }
 
