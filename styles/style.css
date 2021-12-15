@@ -1,5 +1,18 @@
 body {
+  
+  
+  
+}
+
+#header-container{
   text-align: center;
+}
+
+#game-container{
+
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 21%;
 }
 
 body h1 {
@@ -28,11 +41,11 @@ body button {
   line-height: 78px;
   font-size: 20px;
   font-family: 'Bebas Neue', sans-serif;
-  background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+  background: linear-gradient(45deg, transparent 5%, #4d4547 5%);
   border: 0;
   color: #fff;
   letter-spacing: 3px;
-  box-shadow: 6px 0px 0px #00E6F6;
+  box-shadow: 6px 0px 0px #3f3;
   outline: transparent;
   position: relative;
   user-select: none;
@@ -55,8 +68,8 @@ body button {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
-  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  background: linear-gradient(45deg, transparent 3%, #3f3 3%, #3f3 5%, #4d4547 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #3f3;
   clip-path: var(--slice-0);
 }
 
@@ -128,7 +141,7 @@ html, body {
 }
 
 body {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #000000, #292325, #354146, #afb3b2);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
@@ -147,13 +160,61 @@ body {
 
 #header{
   border-radius: 10px;
-  box-shadow: 6px 0px 0px #00E6F6;
+  box-shadow: 6px 0px 0px #3f3;
+  
 }
+
 
 #my-canvas{
 
   border-radius: 10px;
   
+  
+  
+}
+
+#game-board{
+  position: relative;
+  width: 1000px;
+  height: 500px;
+}
+
+#restart-button{
+  position: absolute;
+  top: 250px;
+  left: 425px;
+}
+
+#instructions {
+  color: #3f3;
+  
+  
+}
+
+li{
+  margin: 20px 0;
 }
 
 
+li {
+  color: #3f3;
+  width: 25ch;
+  animation: typing 2s steps(30), blink .5s step-end infinite ;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 1em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}

@@ -7,18 +7,39 @@
     <link rel="stylesheet" href="styles/style.css" />
     <title>ironHacksbulla</title>
   </head>
+  
   <body>
-    
+    <div id="header-container">
     <img id="header" src="./images/header.jpg" alt="" style="width:33%;" />
     <br />
     <button id="start-button">StartGame</button>
+  </div>
+
+  <div id="game-container">
+
+    <div id="instructions"> <h1> INSTRUCTIONS </h1>
+      <ul>
+        <h2><li>Press START to play</li></h2>
+        <h2><li>Press SPACEBAR to JUMP</li></h2>
+        <h2><li>Don't get caught by ABDUR or his MANAGER</li></h2>
+        <h2><li>Get 25 points to Unlock <br> SUPER HASBULLA</li></h2>
+ 
+      </ul>
+     </div>
+
     <div id="game-board">
       <canvas id="my-canvas" width="1000" height="500"></canvas>
+
+     <!--<button id="restart-button">RestartGame</button> -->
     </div>
 
    
+  </div>
+
+
     <script type="text/javascript" src="./js/constants.js"></script>
     <script type="text/javascript" src="./js/lower-obstacles.js"></script>
+    <script type="text/javascript" src="./js/upper-obstacles.js"></script>
     <script type="text/javascript" src="./js/score-image.js"></script>
     <script type="text/javascript" src="./js/background.js"></script>
     <script type="text/javascript" src="./js/background-footer.js"></script>

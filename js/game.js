@@ -1,5 +1,8 @@
 const OBSTACLE_FRAMES = 120
 
+const OBSTACLE_UPPER_FRAMES = 1000
+
+
 class Game {
    constructor(ctx){
        this.ctx = ctx
@@ -33,9 +36,17 @@ class Game {
         this.intervalId = setInterval(() => {
             if (this.obstacleFramesCount % OBSTACLE_FRAMES === 0) {
                 this.addLowerObstacle()
-      
-                this.obstacleFramesCount = 0
+                
+                
               }
+
+            if (this.obstacleFramesCount % OBSTACLE_UPPER_FRAMES === 0) {
+                this.addUpperObstacle()
+      
+               
+              }
+
+
             this.clear()
 
             this.move()
@@ -90,10 +101,10 @@ class Game {
 
     
 
-    this.ctx.fillStyle = 'orange'
+    this.ctx.fillStyle = 'black'
     this.ctx.font = ' bold 20px sans-serif'
 
-    this.ctx.fillText(`Score: ${this.score} ptos`, 80, 40)
+    this.ctx.fillText(`Score: ${this.score} POINTS`, 80, 40)
 
     this.ctx.restore()
 }
@@ -119,6 +130,16 @@ class Game {
     this.obstacles.push(
       new Lowerobstacle(this.ctx, 900 , 335, this.backgroundfooter.vx)
     )
+  }
+
+  addUpperObstacle(){
+      const min = this.ctx.canvas.width;
+      const max = this.ctx.canvas.width + 2000;
+      const x = Math.floor(Math.random() * (max - min) + min)
+    this.obstacles.push(
+        new Upperobstacle(this.ctx, x , 250, this.backgroundfooter.vx -5)
+      )
+
   }
 
    onKeyDown(keyCode) {
