@@ -170,8 +170,11 @@ gameOver() {
     let imageType = 0;
 
 
-    if (this.score > 0 && this.score < 5) {
+    if (this.score >= 0 && this.score < 5) {
+        
+        document.getElementById('hasbulla-lost').style.display = 'block';
         imageType = 0
+        
     } else if(this.score >= 5 && this.score < 15) {
         imageType = 1
     } else if(this.score >= 15 && this.score < 25) {

@@ -2,16 +2,16 @@ class ScoreImage {
     constructor(ctx, imageType){
         this.ctx = ctx 
 
-        this.width = 400
-        this.height = 400
+        this.width = 300
+        this.height = 300
 
-        this.x = 300
+        this.x = 350
         this.y = 175
 
         this.score = 0
         
         this.images = [
-            './images/hasbullaenfadado1.png',
+            './images/hasbullaenfadado2.png',
             './images/hasbullascore.jpg',
             './images/hasbullatraje.jpg',
             './images/hasbullaganador.jpg',
