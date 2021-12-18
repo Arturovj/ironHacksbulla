@@ -44,6 +44,8 @@ draw(){
     this.ctx.font = 'bold 32px sans-serif'
     this.ctx.fillText('Game Over', this.ctx.canvas.width / 2, this.ctx.canvas.height / 5)
 
+    
+     
     if (this.score >= 0 && this.score < 5) {
         this.ctx.fillText(`Hasbulla is not happy, you did ${this.score} points` , this.ctx.canvas.width / 2, this.ctx.canvas.height / 5 + 50)
     }
