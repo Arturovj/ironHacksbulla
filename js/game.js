@@ -20,7 +20,7 @@ class Game {
        this.obstacleFramesCount = 0
        this.intervalId = undefined
 
-       this.hasbullaSound = new Audio('/sounds/hasbullajump.wav')
+       this.hasbullaSound = new Audio('./sounds/hasbullajump.wav')
        this.hasbullaSound.volume = 0.3
        
        this.score = 0
