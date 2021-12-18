@@ -46,9 +46,18 @@ draw(){
 
     
      
-    if (this.score >= 0 && this.score < 5) {
+    if (this.score === 0) {
         this.ctx.fillText(`Hasbulla is not happy, you did ${this.score} points` , this.ctx.canvas.width / 2, this.ctx.canvas.height / 5 + 50)
     }
+    else if (this.score === 1) {
+        this.ctx.fillText(`Hasbulla is not happy, you did ${this.score} point` , this.ctx.canvas.width / 2, this.ctx.canvas.height / 5 + 50)
+    }
+
+
+    else if (this.score > 1 && this.score < 5){
+        this.ctx.fillText(`Hasbulla is not happy, you did ${this.score} points` , this.ctx.canvas.width / 2, this.ctx.canvas.height / 5 + 50)
+    }
+
     else if (this.score >= 5 && this.score < 15) {
         this.ctx.fillText(`Hasbulla is happy, you did ${this.score} points` , this.ctx.canvas.width / 2, this.ctx.canvas.height / 5 + 50)
     }
