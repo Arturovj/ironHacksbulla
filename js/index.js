@@ -4,7 +4,10 @@ const ctx = canvas.getContext('2d');
 
 window.onload = function() {
  document.getElementById("start-button").onclick = function() {
-     startGame();
+    window.scrollTo(0,document.body.scrollHeight) 
+    
+    startGame();
+
  };
 
  const game = new Game(ctx)

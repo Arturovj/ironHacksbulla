@@ -1,5 +1,5 @@
 body {
-  
+ padding-bottom: 250px; 
 }
 
 #header-container{
@@ -10,11 +10,11 @@ body {
 
   display: flex;
   justify-content: space-evenly;
-  padding-right: 21%;
+  padding-right: 15%;
 }
 
 body h1 {
-  font-size: 30px;
+  font-size: 24px;
   text-transform: uppercase;
 }
 
@@ -202,7 +202,7 @@ li {
   overflow: hidden;
   border-right: 3px solid;
   font-family: monospace;
-  font-size: 1em;
+  font-size: 0.7em;
 }
 
 @keyframes typing {
@@ -216,3 +216,4 @@ li {
     border-color: transparent
   }
 }
+
