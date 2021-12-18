@@ -176,8 +176,10 @@ gameOver() {
         imageType = 0
         
     } else if(this.score >= 5 && this.score < 15) {
+        document.getElementById('hasbulla-killer').style.display = 'block';
         imageType = 1
     } else if(this.score >= 15 && this.score < 25) {
+        
         imageType = 2
     } else if(this.score >= 25) {
         imageType = 3

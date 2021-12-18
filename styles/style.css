@@ -225,3 +225,13 @@ li {
   transform: translate(-50%, -50%);
   display: none;
 }
+
+#hasbulla-killer{
+  padding-top: 17%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
