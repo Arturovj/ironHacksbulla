@@ -89,7 +89,7 @@ class Player {
         if (
           this.x +30  < (obstacle.x) + obstacle.width &&
           this.x + (this.width - 50) > obstacle.x &&
-          this.y < obstacle.y + obstacle.height &&
+          this.y +50 < obstacle.y + obstacle.height &&
           this.y + (this.height -30 ) > obstacle.y
         ) {
             console.log('collision')

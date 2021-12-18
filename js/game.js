@@ -41,7 +41,11 @@ class Game {
               }
 
             if (this.obstacleFramesCount % OBSTACLE_UPPER_FRAMES === 0) {
-                this.addUpperObstacle()
+                
+
+                if (this.score >= 15){
+                    this.addUpperObstacle()
+                }
       
                
               }
@@ -172,7 +176,7 @@ gameOver() {
         imageType = 1
     } else if(this.score >= 15 && this.score < 25) {
         imageType = 2
-    } else if(this.score >= 25 && this.score < 35) {
+    } else if(this.score >= 25) {
         imageType = 3
     }
 

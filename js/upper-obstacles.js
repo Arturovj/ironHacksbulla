@@ -4,11 +4,11 @@ class Upperobstacle {
         this.x = x
         this.y = y
 
-        this.width = 150
-        this.height = 25
+        this.width = 75
+        this.height = 75
 
         this.img = new Image()
-        this.img.src = './images/hasbullamalo.png'
+        this.img.src = './images/burger.png'
 
         this.img.isReady = false
 
