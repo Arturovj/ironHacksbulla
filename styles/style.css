@@ -167,6 +167,8 @@ body {
 #my-canvas{
 
   border-radius: 25px;
+  align-items: center;
+  
  
   
   
@@ -174,6 +176,7 @@ body {
 }
 
 #game-board{
+  
   position: relative;
   width: 1000px;
   height: 500px;
