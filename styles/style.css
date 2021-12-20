@@ -10,7 +10,8 @@ body {
 
   display: flex;
   justify-content: space-evenly;
-  padding-right: 15%;
+  padding-right: 18%;
+  
 }
 
 body h1 {
@@ -166,6 +167,7 @@ body {
 #my-canvas{
 
   border-radius: 10px;
+  padding-right: 10px;
   
   
   

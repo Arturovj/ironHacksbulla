@@ -22,6 +22,18 @@ class Game {
 
        this.hasbullaSound = new Audio('./sounds/hasbullajump.wav')
        this.hasbullaSound.volume = 0.3
+
+
+       this.backgroundMusic = new Audio('./sounds/backgroundmusic.mp3')
+       this.backgroundMusic.volume = 0.5
+
+       this.gameOverSound = new Audio('./sounds/gameoversound.wav')
+       this.gameOverSound.volume = 0.5
+
+
+
+       this.winSound = new Audio('./sounds/winsound.wav')
+       this.winSound.volume = 0.5
        
        this.score = 0
 
@@ -56,6 +68,8 @@ class Game {
             this.move()
 
             this.draw()
+
+            this.backgroundMusic.play()
 
 
 
@@ -174,21 +188,30 @@ gameOver() {
         
         document.getElementById('hasbulla-lost').style.display = 'block';
         imageType = 0
+        this.gameOverSound.play()
         
     } else if(this.score >= 5 && this.score < 15) {
         document.getElementById('hasbulla-killer').style.display = 'block';
         imageType = 1
+        this.gameOverSound.play()
     } else if(this.score >= 15 && this.score < 25) {
         
         imageType = 2
+        this.gameOverSound.play()
     } else if(this.score >= 25) {
         imageType = 3
+        this.winSound.play()
+        
     }
 
     this.scoreimage = new ScoreImage(ctx, imageType)
 
     clearInterval(this.intervalId)
     this.scoreimage.score = this.score
+
+    this.backgroundMusic.pause()
+    
+    
 
   }
 
