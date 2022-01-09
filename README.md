@@ -2,10 +2,10 @@
 
 <img src="./images/header.jpg" width="500px">
 
-**Description**
+# **Description**
 <p>Based on Google dinosaur game.</p>
 
-**Instructions**
+## **Instructions**
 <p>Press START to play</p>
 <p>Press SPACEBAR to JUMP</p>
 <p>Don't get caught by ABDUR <br> or his Burger</p>
