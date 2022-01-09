@@ -8,8 +8,8 @@
 ## **Instructions**
 <p>Press START to play</p>
 <p>Press SPACEBAR to JUMP</p>
-<p>Don't get caught by ABDUR <br> or his Burger</p>
-<p>Get 25 points to Unlock <br> CHAMPION HASBULLA</p>
+<p>Don't get caught by ABDUR or his Burger</p>
+<p>Get 25 points to Unlock CHAMPION HASBULLA</p>
 
 ## FINAL STEP
 Have fun!
